@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image upload</title>
+    <%- include("partials/head") %>
+</head>
+
+<body>
+    <%- include("partials/navigation") %> 
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div class="input-group mb-3">
+                                <input type="file" name="image" class="form-control" id="inputGroupFile02">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="title" placeholder="Title" class="form-control">
+
+                            </div>
+
+
+                            <div class="form-group"> 
+                                <textarea name="description" class="form-control" placeholder="Descripción"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-block">
+                                    Upload
+                                </button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
